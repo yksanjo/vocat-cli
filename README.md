@@ -1,55 +1,84 @@
-# VoCAT-CLI
+# vocat-cli
 
-Voice-controlled GitHub Actions and CI/CD pipeline manager.
+## Detailed Description
 
-## Features
+vocat-cli is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-- Voice commands to trigger GitHub Actions
-- Monitor workflow runs
-- Deploy to environments
-- Natural language pipeline control
+## Problem Statement
 
-## Installation
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-npm install -g vocat-cli
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-```bash
-# Trigger a workflow
-vocat-ci run tests
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-# Deploy to environment
-vocat-ci deploy staging
-vocat-ci deploy production
+## Quality Standards
 
-# Check workflow status
-vocat-ci status
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-# Cancel running workflow
-vocat-ci cancel
-```
+## Security
 
-## Configuration
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-Set up GitHub token:
-```bash
-export GITHUB_TOKEN=your_token
-```
+## Contributing
 
-Or configure in `~/.vocat/config.json`:
-```json
-{
-  "github": {
-    "token": "your_token",
-    "owner": "your-username",
-    "repo": "your-repo"
-  }
-}
-```
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
+
+## Roadmap
+
+Track upcoming milestones, technical debt, and planned feature work.
+
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT
+This project is released under the MIT License.
